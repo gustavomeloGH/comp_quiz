@@ -1,0 +1,55 @@
+.banner-header {
+    background: url('../../assets/quiz-banner.jpg') no-repeat;
+    height: 510px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.title-banner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.title-banner p {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    top: 70%;
+    color: white;
+    text-shadow: 1px 1px 1px #373737;
+    font-weight: 600;
+    font-size: 36px;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+ul.navbar-nav {
+    display: flex;
+    width: 100%;
+    margin-left: 90px;
+}
+
+li.nav-item {
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .title-banner p {
+      font-size: 25px;
+    }
+    .banner-header {
+        background: url('../../assets/quiz-banner-mobile.jpg') no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+    
+}
+
+
+@media only screen and (max-width: 278px) {
+    .title-banner p {    
+        font-size: 9vw;
+      }
+}

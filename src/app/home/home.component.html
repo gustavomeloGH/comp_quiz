@@ -1,0 +1,97 @@
+<section class="container">
+    <div class="content-container">
+        <h1>Quiz Computação</h1>
+        <div class="content-text">
+            <p> 
+                Aqui no QUIZ COMP você pode responder a vários questionários online, sendo essas questões mais relevantes na área de TI.
+                 Você pode escolher qual categoria vai responder o Quiz e sua pontuação sempre ficará guardada.
+                 Dependendo da sua pontuação geral, seu nome poderá estar colocado entre os primeiros na página de Ranking Geral .
+                 <br>
+            </p>
+            <p>
+                Lembre-se de realizar o login para acessar o sistema e divirta-se, veja seu nível de conhecimento, aprenda mais e se torne 
+                 o melhor na pontuação! Não se esqueça de olhar o seu Painel de Acesso, para sempre ficar atualizado de suas pontuações adiquiridas;
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div *ngIf="!userAlreadyLoggedIn" class="content-container">
+        <div class="form-login">
+            <h2>
+                Login
+            </h2>
+            <div class="form">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                                <input type="email"  [(ngModel)]="user.email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Digite seu e-mail aqui">
+                        </div>
+                        <div class="col-md-6">
+                                <input type="password" [(ngModel)]="user.senha" class="form-control" id="inputPassword" placeholder="Digite sua senha aqui">
+                        </div>
+                    </div>    
+                </div>
+                <div class="submit-button text-center">
+                    <button type="submit" class="btn btn-success" (click)="doLogin()">
+                        Login
+                    </button>
+                </div>
+                
+            </div>
+            
+            <!-- Button Modal -->
+            <div class="create-account text-center">
+                <p> <a href="javascript:void(0);" (click)="openModal(template)">Não possue conta?</a></p>
+            </div>
+              <!-- Modal -->
+            <ng-template #template>
+                <div class="modal-header">
+                    <h4 class="modal-title pull-left"><i class="fas fa-user-plus"></i><span>Cadastro</span></h4>
+                    <button type="button" class="close pull-right" 
+                        aria-label="Close" (click)="modalRef.hide();cleanUserData()">
+                        <span class="text-danger" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <input type="email" [(ngModel)]="user.nome" class="form-control" id="inputCreateNome"  placeholder="Nome">
+                            </div>
+                            <div class="col-md-6">
+                                    <input type="text" [(ngModel)]="user.email" class="form-control" id="inputCreateEmail" placeholder="E-mail">
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <input type="password" [(ngModel)]="user.senha" class="form-control" id="inputCreatePassword" aria-describedby="emailHelp" placeholder="Senha">
+                            </div>
+                            <div class="col-md-6">
+                                    <input type="password" [(ngModel)]="confirmacaoSenha" class="form-control" id="inputCreatePassword2" placeholder="Repita a senha">
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="submit-button submit-create-button text-center">
+                        <button (click)="doRegister()" type="submit" class="btn btn-success"><i class="far fa-check-circle"></i>
+                            Cadastrar! </button>
+                        <p><i class="far fa-hand-point-right"></i>
+                            Ao me cadastrar, estou concordando com os termos do site!</p>
+                    </div>
+                </div>
+            </ng-template> 
+            <!--end-Modal-->
+
+        </div>
+    </div>
+    <div *ngIf="isLoading" class="preloader">
+        <div id="preloader">
+            <div id="loader"></div>
+        </div>
+    </div>
+
+    
+  
+    
+</section>

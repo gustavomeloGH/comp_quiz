@@ -1,0 +1,42 @@
+<section class="container">
+
+  <div class="row">
+    <div class="offset-md-1 col-md-10">
+      <div class="text-center">
+          <img src="../../assets/trofeu.jpg"> 
+          <h1>Ranking Geral</h1>
+      </div>
+      <div *ngIf="isLoading" class="preloader">
+          <div id="preloader">
+              <div id="loader"></div>
+          </div>
+      </div>
+  
+      <div *ngIf="!isLoading" class="ranking-list">
+          <div class="ranking-list-inside">
+
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Ranking Geral</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="line-ranking" *ngFor="let user of users let i = index" [attr.data-index]="i">
+                      <td><h4><span [class]="i < 3 ? 'number-style-first' : 'number-style-anothers'" class="number-style">{{i+1}} </span></h4></td>
+                      <td><h4><span class="capitalize">{{ user.nome }}</span></h4></td>
+                      <td><h4><span> {{ user.rankingGeral }}</span></h4></td>
+                    </tr>
+                  </tbody>
+                </table>
+              
+          </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+</section>

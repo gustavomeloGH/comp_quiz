@@ -1,0 +1,201 @@
+h2 {
+    margin: 70px 0;
+}
+
+h4 {
+    margin: 40px 0 20px;
+}
+
+.title {
+    margin: 70px 0 0;
+}
+
+h6 {
+    background: #00c2e1;
+    width: 55%;
+    padding: 5px 0;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    font-weight: 300;
+}
+
+.radio-prototype span {
+    margin-left: 10px;
+    color: #818181;
+}
+
+.category-container {
+    margin: 80px 0;
+}
+
+.radio-prototype {
+    
+    position: relative;
+    padding: 10px 8px;
+}
+
+.modal-header span {
+    padding-left: 15px;
+}
+
+.question-prototype {
+    cursor: pointer;
+    padding: 20px 20px;     
+    -ms-transition: all 4s linear;
+    -o-transition: all 4s linear;
+    transition: all .4s linear;
+    -webkit-box-shadow: -1px 0px 12px -4px   rgba(102, 102, 102, 0.75); 
+    -moz-box-shadow: -1px 0px 12px -4px   rgba(102, 102, 102, 0.75);
+    box-shadow: -1px 0px 12px -4px   rgba(102, 102, 102, 0.75); 
+    margin: 30px 0px;
+    color: #2c2c2c
+}
+
+.question-prototype i {
+    color: #ff800085;
+    padding-right: 15px;
+    
+}
+.question-prototype:hover i {
+    display: inline;
+    color: #ff8000;
+}
+.question-prototype:hover {
+    -webkit-box-shadow: 0px 0px 7px 0px rgb(0, 114, 157);
+    -moz-box-shadow: 0px 0px 7px 0px rgb(0, 114, 157);
+    box-shadow: 0px 0px 7px 0px rgb(0, 114, 157);
+    padding: 20px 40px;
+    color: black;
+}
+
+.button-submit {
+    width: 100%;
+    text-align: center;
+   margin: 40px 0 60px;
+}
+
+.button-submit .btn {
+    width: 50%;
+    background: #F58634;
+    color: white;
+}
+
+.button-submit i {
+    padding-left: 10px;
+}
+
+label {
+    line-height: 1.5;
+    margin-left: 28px;
+}
+
+
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #91ceff;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .container input:checked ~ .checkmark:after {
+     background: #00c2e1;
+     border: 3px solid #ffffff;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    background: white;
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    left: 5px;
+    margin: auto;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+  }
+
+  .end-container i {
+    font-size: 90px;
+    color: #ffb01f;
+    margin-top: -20px;
+  }
+
+  .end-container {
+    margin: 100px 0;
+  }
+  
+
+
+  .loader svg {
+    width: 300px;
+    height: 108px;
+  }
+  .loader svg polygon {
+    fill: currentColor;
+    color: #ccc;
+    animation: change 2.4s infinite;
+  }
+  .loader svg polygon:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+  .loader svg polygon:nth-child(2) {
+    animation-delay: 0.8s;
+  }
+  .loader svg polygon:nth-child(3) {
+    animation-delay: 1.2s;
+  }
+  .loader svg polygon:nth-child(4) {
+    animation-delay: 1.6s;
+  }
+  .loader svg polygon:nth-child(5) {
+    animation-delay: 2s;
+  }
+  @keyframes change {
+    0% {
+      color: #ccc;
+    }
+    30% {
+      color: orange;
+    }
+    100% {
+      color: #ccc;
+    }
+  }
+  

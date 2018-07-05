@@ -1,0 +1,32 @@
+img {
+    width: 50%;
+}
+
+h1 {
+    padding: 40px 0 60px;
+}
+
+
+
+.ranking-list-inside {
+    margin-bottom: 150px;
+}
+
+.line-ranking {
+    margin: 20px 0 20px;
+}
+
+.number-style {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.number-style-first {
+    text-shadow: 1px 1px 1px #b28b6f;
+    color: #fec72f;
+}
+
+.number-style-anothers {
+    text-shadow: 1px 1px 1px #878787;
+    color: #98a3ff;
+}

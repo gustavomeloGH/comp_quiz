@@ -1,0 +1,87 @@
+<div *ngIf="isLoading" class="preloader">
+        <div id="preloader">
+            <div id="loader"></div>
+        </div>
+    </div>
+
+
+
+<section *ngIf="!isLoading"  class="container">  
+    <aside class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="profile">
+                <h1>
+                    <i class="text-info far fa-address-card"></i>
+                    Dados pessoais
+                </h1>
+
+                <div class="profile-info">
+                    <div class="nome">
+                        <h3>Nome</h3>
+                        <h5 class="capitalize">{{user.nome}}</h5>
+                    </div>
+                    <div class="email">
+                        <h3>E-mail</h3>
+                        <h5>{{user.email}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <aside class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="ranking-profile">
+                <h1>
+                    <i class="text-warning fas fa-trophy"></i>
+                    Seu ranking
+                </h1>
+
+                <div *ngIf="isEmptyRanking" class="profile-info text-center">
+                    <i class="far fa-frown"></i>
+                    <div>
+                        <h4>Você ainda não respondeu nenhum Quiz!
+                            <br>
+                            Mas não precisa ficar assim, clique na aba Quiz acima e divirta-se!
+                        </h4>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div *ngIf="!isEmptyRanking" class="profile-info">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nome do questionário</th>
+                            <th scope="col">Pontuação</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let currRanking of user.rankings" >
+                            
+                            <tr>
+                                <td> 
+                                    <h5>
+                                        <span class="text-info">
+                                                <span >{{currRanking[0]}}</span>
+                                        </span>
+                                    </h5>
+                                </td>
+                                <td>
+                                    <h5>
+                                        <span class="text-info">
+                                            <span >{{currRanking[1]}}</span> pontos!
+                                        </span>
+                                    </h5>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </aside>
+</section>

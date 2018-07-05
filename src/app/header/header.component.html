@@ -1,0 +1,33 @@
+<nav *ngIf="userAlreadyLoggedIn" class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['home']" >CompQuiz</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div *ngIf="userAlreadyLoggedIn" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" [routerLinkActive]="['active']" >
+        <a class="nav-link" [routerLink]="['home']">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['dashboard']"  >Dashboard</a>
+      </li>
+      <li  class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['ranking']"   >Ranking Geral</a>
+      </li> 
+      <li  class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['quiz']" >Quiz</a>
+      </li> 
+      <li  class="nav-item">
+        <a class="nav-link" (click)="doLogoff();" >Sair</a>
+      </li>      
+    </ul>    
+  </div>
+</nav>
+
+<section class="banner-header">
+  <div class="title-banner">
+      <p>Ponha em prática seus conhecimentos sobre computação!</p>
+  </div>
+
+</section>

@@ -1,0 +1,41 @@
+[33mcommit 8168d5cc28e6741d0a46a6ad060d7f413abade2b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Gustavo <gustavomelo.contato@gmail.com>
+Date:   Mon May 28 00:08:21 2018 -0300
+
+    Atualizado
+
+[33mcommit 0449083f9b6e6cb5a47a3a578a8becdfd645607b[m[33m ([m[1;31mupstream/master[m[33m)[m
+Author: Gustavo <gustavomelo.contato@gmail.com>
+Date:   Sun May 27 23:10:05 2018 -0300
+
+    Atualizado projeto
+
+[33mcommit fb8a1b80cecc538c69a250f68e5c126a7b3d24a0[m
+Author: Gustavo <gustavomelo.contato@gmail.com>
+Date:   Sun May 27 04:48:43 2018 -0300
+
+    Integração Firebase, CRUD e tela Inicial (login e cadastro) OK
+
+[33mcommit 6b4f59edf3d8a5666833925037fd8140a2b3cc72[m
+Author: Gustavo <gustavomelo.contato@gmail.com>
+Date:   Sun May 27 04:40:36 2018 -0300
+
+    Adicionado gitignore
+
+[33mcommit 41feb29fad29ccbf154e2d74b18a102c10ada637[m
+Author: phellykz <phellykz-020@hotmail.com>
+Date:   Fri May 25 14:43:47 2018 -0300
+
+    integração com firebase comcluida com sucesso
+
+[33mcommit eac4770a02c7bb6f2a64c1232051320fce5ffd48[m
+Author: phellykz <phellykz-020@hotmail.com>
+Date:   Tue May 22 23:33:28 2018 -0300
+
+    begins project
+
+[33mcommit 1c4790ee2f24e01e0f4af59de36a8d5e3347d816[m
+Author: Luiz Felix <phellykz-020@hotmail.com>
+Date:   Tue May 22 23:14:25 2018 -0300
+
+    Initial commit

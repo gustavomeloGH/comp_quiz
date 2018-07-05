@@ -1,0 +1,28 @@
+.profile,
+.ranking-profile {
+    width: 100%;
+}
+
+h1 {
+    padding: 70px 0 40px;
+}
+
+h3 {
+    padding: 20px 0 10px;
+    color: #aaaaaa;
+}
+
+.profile h5 {
+    border-bottom: 2px dotted #bababa;
+}
+
+
+.profile-info {
+    margin-bottom: 80px;
+}
+
+.ranking-profile .fa-frown {
+    font-size: 60px;
+    color: #a8a8a8;
+    padding: 30px 0 30px;
+}

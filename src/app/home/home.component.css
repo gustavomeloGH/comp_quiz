@@ -1,0 +1,48 @@
+
+
+.content-text p {
+   text-indent: 50px;
+   margin-bottom: 0;
+}
+
+h1, h2 {
+    padding-bottom: 30px;
+}
+
+.submit-button {    
+    margin: 40px 0 20px;
+}
+
+.submit-button button {
+    padding: 6px 100px;
+}
+
+.submit-create-button p {
+    font-size: 11px;
+    padding-top: 10px;
+    font-weight: 600;
+}
+.modal-title span {
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    input {
+      margin-bottom: 20px;
+    }
+    h2 {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 278px) {
+    .submit-button button {
+        padding: 6px 34vw;
+    }
+    h1 {
+      font-size: 10vw;
+    }
+    .content-text p {
+        text-indent: 10px;
+    }
+}

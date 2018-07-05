@@ -1,0 +1,95 @@
+<section *ngIf="isLoading">
+  <div class="preloader">
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
+  </div>
+</section>
+
+<section *ngIf="!isLoading" class="container quiz-section">
+
+  <article *ngIf="showQuiz" class="category-container">
+
+    <h2>Escolha um tema e boa sorte.</h2>
+    <div (click)="startQuestion(category)" *ngFor="let category of arrayCategory" class="question-prototype">
+      <h3>
+        <i class="fas fa-hand-point-right"></i>Categoria: {{category}}</h3>
+    </div>
+
+  </article>
+
+  <article *ngIf="showQuestion" class="question-container">
+    <div class="row">
+
+      <div class="col-md-8 offset-2">
+
+        <div class="row title">
+          <div class="col-md-10">
+              <h6>Categoria: {{currCategory}}</h6>
+          </div>
+          <div class="col-md-2">
+              <div class="step">{{questionShow+1}} de {{arrayByCategory.length}}</div>
+          </div>
+        </div>
+        <div class="question-wrapper" *ngFor="let currArray of arrayByCategory  let indexQuestion = index" [attr.data-index]="indexQuestion">
+
+          <div class="question-inside" *ngIf="questionShow === indexQuestion">
+
+            <h4>{{indexQuestion+1}}º {{currArray.title}}</h4>
+            <div class="radio-prototype" *ngFor="let alternative of currArray.alternatives let indexAswer = index" [attr.data-index]="indexAswer">
+              <label>
+                <span>{{alternative}} </span>
+                <input type="radio" class="check" name="alternative" (click)="changeValue(indexAswer)" value="{{indexAswer}}">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="button-submit">
+                <button type="button" (click)="submitAswer(indexQuestion); openModal(template)" class="btn btn">Responder<i class="fas fa-long-arrow-alt-right"></i>
+                </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <ng-template #template>
+        <div class="modal-header">
+            <h5 *ngIf=" alert === OK " class="text-success modal-title pull-left text-center"><i class="fas fa-check-circle"></i><span>{{msgAswer}}</span></h5>
+            <h5 *ngIf=" alert === NOTOK " class="text-danger modal-title pull-left text-center"><i class="fas fa-times"></i><span>{{msgAswer}}</span></h5>
+            <h5 *ngIf=" alert === NEED " class="text-danger modal-title pull-left text-center"><i class="fas fa-exclamation-triangle"></i><span>{{msgAswer}}</span></h5>
+            <button type="button" class="close pull-right" 
+                aria-label="Close" (click)="modalRef.hide()">
+                <span class="text-danger" aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </ng-template> 
+    <!--end-Modal-->
+  </article>
+
+  <article  *ngIf="showEnd" class="end-container">
+    <div class="row">
+       <div class="col-md-8 offset-2">
+          <div class="loader text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="75" height="27" viewBox="0 0 75 27">
+                <g fill-rule="evenodd">
+                  <polygon points="6.1 14.9 7.7 19.4 12.3 19.5 8.5 22.2 10 26.7 6.1 24 2.3 26.7 3.7 22.2 0 19.5 4.6 19.4"/>
+                  <polygon points="20.4 4.1 21.8 8.5 26.6 8.5 22.8 11.4 24.3 15.8 20.4 13.1 16.6 15.8 18 11.4 14.3 8.5 18.9 8.5"/>
+                  <polygon points="37.9 0 39.3 4.5 44 4.5 40.2 7.3 41.6 11.8 37.9 9 34 11.8 35.4 7.3 31.7 4.5 36.3 4.5"/>
+                  <polygon points="54.9 4.1 56.3 8.5 61 8.5 57.2 11.4 58.6 15.8 54.9 13.1 51 15.8 52.4 11.4 48.6 8.5 53.4 8.5"/>
+                  <polygon points="68.9 15.2 70.3 19.7 75 19.8 71.2 22.5 72.7 27 68.9 24.3 65 27 66.4 22.5 62.7 19.8 67.3 19.7"/>
+                </g>
+              </svg>
+            </div>
+        <div class="text-center">
+            <i class="fas fa-trophy"></i>
+            <h2>{{msgEnd}}</h2>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+</section>
